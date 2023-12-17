@@ -1,0 +1,1616 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY laptops "https://github.com/RedMaG02/laptops#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY om "http://www.ontology-of-units-of-measure.org/resource/om-2/" >
+]>
+
+
+<rdf:RDF xmlns="https://github.com/RedMaG02/laptops#"
+     xml:base="https://github.com/RedMaG02/laptops"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:laptops="https://github.com/RedMaG02/laptops#"
+     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="https://github.com/RedMaG02/laptops">
+        <rdfs:label>ИЗ2 Ноутбуки</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit -->
+
+    <owl:AnnotationProperty rdf:about="&om;hasUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#gigabytes -->
+
+    <rdfs:Datatype rdf:about="&laptops;gigabytes">
+        <owl:equivalentClass rdf:resource="&xsd;positiveInteger"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#gigahertz -->
+
+    <rdfs:Datatype rdf:about="&laptops;gigahertz">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;float">0.0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#inches -->
+
+    <rdfs:Datatype rdf:about="&laptops;inches">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;float">0.0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#megahertz -->
+
+    <rdfs:Datatype rdf:about="&laptops;megahertz">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;float">0.0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#pixel -->
+
+    <rdfs:Datatype rdf:about="&laptops;pixel">
+        <owl:equivalentClass rdf:resource="&xsd;positiveInteger"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#watthour -->
+
+    <rdfs:Datatype rdf:about="&laptops;watthour">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;float">0.0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет -->
+
+    <owl:ObjectProperty rdf:about="&laptops;Имеет">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Произведен -->
+
+    <owl:ObjectProperty rdf:about="&laptops;Произведен"/>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Работает_на -->
+
+    <owl:ObjectProperty rdf:about="&laptops;Работает_на"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Bluetooth -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Bluetooth">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Модуль"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#WIFI -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;WIFI">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Модуль"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Вес -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Вес">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Ноутбук"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Гарантия_мес -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Гарантия_мес">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&laptops;Ноутбук"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_диагональ -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_диагональ">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Дисплей"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_емкость -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_емкость">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Батарея"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_объем_RAM -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_объем_RAM">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;RAM"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_объем_VRAM -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_объем_VRAM">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;VRAM"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_объем_диска -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_объем_диска">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Жесткий_диск"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_разрешение_дисплея -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_разрешение_дисплея">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_тип_дисплея -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_тип_дисплея">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&laptops;Дисплей"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_цену -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_цену">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Ноутбук"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_частоту -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_частоту">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_число_слотов -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_число_слотов"/>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Имеет_число_ядер -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Имеет_число_ядер">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="&laptops;Процессор"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Материал -->
+
+    <owl:DatatypeProperty rdf:about="&laptops;Материал">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&laptops;Ноутбук"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#HDD -->
+
+    <owl:Class rdf:about="&laptops;HDD">
+        <rdfs:subClassOf rdf:resource="&laptops;Жесткий_диск"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#RAM -->
+
+    <owl:Class rdf:about="&laptops;RAM">
+        <rdfs:subClassOf rdf:resource="&laptops;Модуль_памяти"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#SSD -->
+
+    <owl:Class rdf:about="&laptops;SSD">
+        <rdfs:subClassOf rdf:resource="&laptops;Жесткий_диск"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#VRAM -->
+
+    <owl:Class rdf:about="&laptops;VRAM">
+        <rdfs:subClassOf rdf:resource="&laptops;Модуль_памяти"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Батарея -->
+
+    <owl:Class rdf:about="&laptops;Батарея">
+        <rdfs:subClassOf rdf:resource="&laptops;Железо"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Видеокарта -->
+
+    <owl:Class rdf:about="&laptops;Видеокарта">
+        <rdfs:subClassOf rdf:resource="&laptops;Железо"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Встроенная_видеокарта -->
+
+    <owl:Class rdf:about="&laptops;Встроенная_видеокарта">
+        <rdfs:subClassOf rdf:resource="&laptops;Видеокарта"/>
+        <owl:disjointWith rdf:resource="&laptops;Дискретная_видеокарта"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Дискретная_видеокарта -->
+
+    <owl:Class rdf:about="&laptops;Дискретная_видеокарта">
+        <rdfs:subClassOf rdf:resource="&laptops;Видеокарта"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Дисплей -->
+
+    <owl:Class rdf:about="&laptops;Дисплей">
+        <rdfs:subClassOf rdf:resource="&laptops;Железо"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Железо -->
+
+    <owl:Class rdf:about="&laptops;Железо">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&laptops;Произведен"/>
+                <owl:allValuesFrom rdf:resource="&laptops;Производитель"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Жесткий_диск -->
+
+    <owl:Class rdf:about="&laptops;Жесткий_диск">
+        <rdfs:subClassOf rdf:resource="&laptops;Железо"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Игровой_ноутбук -->
+
+    <owl:Class rdf:about="&laptops;Игровой_ноутбук">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&laptops;Ноутбук"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Имеет"/>
+                        <owl:someValuesFrom rdf:resource="&laptops;Дискретная_видеокарта"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&laptops;Ноутбук"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Модуль -->
+
+    <owl:Class rdf:about="&laptops;Модуль">
+        <rdfs:subClassOf rdf:resource="&laptops;Железо"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Модуль_памяти -->
+
+    <owl:Class rdf:about="&laptops;Модуль_памяти">
+        <rdfs:subClassOf rdf:resource="&laptops;Железо"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Мощный_ноутбук -->
+
+    <owl:Class rdf:about="&laptops;Мощный_ноутбук">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&laptops;Ноутбук"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Имеет"/>
+                        <owl:someValuesFrom rdf:resource="&laptops;Дискретная_видеокарта"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Имеет_разрешение_дисплея"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;int">1080</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Имеет_цену"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="&xsd;int">50000</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Имеет_частоту"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;int">3000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&laptops;Ноутбук"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Недорогой_ноутбук -->
+
+    <owl:Class rdf:about="&laptops;Недорогой_ноутбук">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&laptops;Ноутбук"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Имеет_цену"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="&xsd;int">30000</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&laptops;Ноутбук"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Ноутбук -->
+
+    <owl:Class rdf:about="&laptops;Ноутбук">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&laptops;Работает_на"/>
+                <owl:allValuesFrom rdf:resource="&laptops;Операционная_система"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&laptops;Произведен"/>
+                <owl:allValuesFrom rdf:resource="&laptops;Производитель"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&laptops;Имеет"/>
+                <owl:allValuesFrom rdf:resource="&laptops;Железо"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Операционная_система -->
+
+    <owl:Class rdf:about="&laptops;Операционная_система"/>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Портативный_ноутбук -->
+
+    <owl:Class rdf:about="&laptops;Портативный_ноутбук">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&laptops;Ноутбук"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Вес"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">1.5</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&laptops;Имеет_цену"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="&xsd;int">100000</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&laptops;Ноутбук"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Производитель -->
+
+    <owl:Class rdf:about="&laptops;Производитель"/>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Процессор -->
+
+    <owl:Class rdf:about="&laptops;Процессор">
+        <rdfs:subClassOf rdf:resource="&laptops;Железо"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#16ГБ_DDR4 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;16ГБ_DDR4">
+        <rdf:type rdf:resource="&laptops;RAM"/>
+        <Имеет_объем_RAM rdf:datatype="&xsd;int">16</Имеет_объем_RAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#16ГБ_LPDDR4x -->
+
+    <owl:NamedIndividual rdf:about="&laptops;16ГБ_LPDDR4x">
+        <rdf:type rdf:resource="&laptops;RAM"/>
+        <Имеет_объем_RAM rdf:datatype="&xsd;int">16</Имеет_объем_RAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#16ГБ_LPDDR5 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;16ГБ_LPDDR5">
+        <rdf:type rdf:resource="&laptops;RAM"/>
+        <Имеет_объем_RAM rdf:datatype="&xsd;int">16</Имеет_объем_RAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#32ГБ_DDR5 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;32ГБ_DDR5">
+        <rdf:type rdf:resource="&laptops;RAM"/>
+        <Имеет_объем_RAM rdf:datatype="&xsd;int">32</Имеет_объем_RAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#8ГБ_DDR4 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;8ГБ_DDR4">
+        <rdf:type rdf:resource="&laptops;RAM"/>
+        <Имеет_объем_RAM rdf:datatype="&xsd;int">8</Имеет_объем_RAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#AMD_Ryzen_5_7520U -->
+
+    <owl:NamedIndividual rdf:about="&laptops;AMD_Ryzen_5_7520U">
+        <rdf:type rdf:resource="&laptops;Процессор"/>
+        <Имеет_число_ядер rdf:datatype="&xsd;int">4</Имеет_число_ядер>
+        <Имеет_частоту rdf:datatype="&xsd;int">4300</Имеет_частоту>
+        <Произведен rdf:resource="&laptops;Manufacturer_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#AMD_VEGA_7 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;AMD_VEGA_7">
+        <rdf:type rdf:resource="&laptops;Встроенная_видеокарта"/>
+        <Произведен rdf:resource="&laptops;Manufacturer_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#ASUS_Vivobook_Go_15_E1504FA-BQ664 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;ASUS_Vivobook_Go_15_E1504FA-BQ664">
+        <rdf:type rdf:resource="&laptops;Ноутбук"/>
+        <Вес rdf:datatype="&xsd;float">1.63</Вес>
+        <Гарантия_мес rdf:datatype="&xsd;int">12</Гарантия_мес>
+        <Имеет_цену rdf:datatype="&xsd;int">55990</Имеет_цену>
+        <Материал rdf:datatype="&xsd;string">Пластик</Материал>
+        <Имеет rdf:resource="&laptops;16ГБ_LPDDR5"/>
+        <Имеет rdf:resource="&laptops;AMD_Ryzen_5_7520U"/>
+        <Имеет rdf:resource="&laptops;AMD_VEGA_7"/>
+        <Произведен rdf:resource="&laptops;Manufacturer_Asus"/>
+        <Имеет rdf:resource="&laptops;SSD_512GB"/>
+        <Имеет rdf:resource="&laptops;МОДУЛЬ_WIFI_BLUETOoTH"/>
+        <Имеет rdf:resource="&laptops;Экран_15.6_;_1920х1080;_IPS;"/>
+        <Работает_на rdf:resource="&laptops;без_ОС"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Acer_Aspire_5_A515-57-506D -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Acer_Aspire_5_A515-57-506D">
+        <rdf:type rdf:resource="&laptops;Ноутбук"/>
+        <Вес rdf:datatype="&xsd;float">1.76</Вес>
+        <Гарантия_мес rdf:datatype="&xsd;int">12</Гарантия_мес>
+        <Имеет_цену rdf:datatype="&xsd;int">62990</Имеет_цену>
+        <Материал rdf:datatype="&xsd;string">Металл</Материал>
+        <Имеет rdf:resource="&laptops;16ГБ_DDR4"/>
+        <Имеет rdf:resource="&laptops;Intel_Core_i5_12450H"/>
+        <Имеет rdf:resource="&laptops;Intel_UHD_Graphics"/>
+        <Произведен rdf:resource="&laptops;Manufacturer_Acer"/>
+        <Имеет rdf:resource="&laptops;SSD_512GB"/>
+        <Имеет rdf:resource="&laptops;Аккумулятор_535"/>
+        <Имеет rdf:resource="&laptops;МОДУЛЬ_WIFI_BLUETOoTH"/>
+        <Имеет rdf:resource="&laptops;Экран_15.6_;_1920х1080;_IPS;"/>
+        <Работает_на rdf:resource="&laptops;без_ОС"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#FREE_DOS -->
+
+    <owl:NamedIndividual rdf:about="&laptops;FREE_DOS">
+        <rdf:type rdf:resource="&laptops;Операционная_система"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#HDD_1TB -->
+
+    <owl:NamedIndividual rdf:about="&laptops;HDD_1TB">
+        <rdf:type rdf:resource="&laptops;HDD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Huawei_MateBook_14_KLVF-X_53013PET -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Huawei_MateBook_14_KLVF-X_53013PET">
+        <rdf:type rdf:resource="&laptops;Ноутбук"/>
+        <Вес rdf:datatype="&xsd;float">1.49</Вес>
+        <Гарантия_мес rdf:datatype="&xsd;int">12</Гарантия_мес>
+        <Имеет_цену rdf:datatype="&xsd;int">79990</Имеет_цену>
+        <Материал rdf:datatype="&xsd;string">Металл</Материал>
+        <Имеет rdf:resource="&laptops;16ГБ_LPDDR4x"/>
+        <Имеет rdf:resource="&laptops;Intel_Core_i5_1240P"/>
+        <Имеет rdf:resource="&laptops;Intel_Iris_Xe_Graphics_G7"/>
+        <Произведен rdf:resource="&laptops;Manufacturer_Huawei"/>
+        <Работает_на rdf:resource="&laptops;OS_Windows_11_Home"/>
+        <Имеет rdf:resource="&laptops;SSD_512GB"/>
+        <Имеет rdf:resource="&laptops;МОДУЛЬ_WIFI_BLUETOoTH"/>
+        <Имеет rdf:resource="&laptops;ЭКРАН_14_;_2160х1440;_IPS;"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Intel_Core_i3_1115G4 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Intel_Core_i3_1115G4">
+        <rdf:type rdf:resource="&laptops;Процессор"/>
+        <Имеет_число_ядер rdf:datatype="&xsd;int">2</Имеет_число_ядер>
+        <Имеет_частоту rdf:datatype="&xsd;int">4100</Имеет_частоту>
+        <Произведен rdf:resource="&laptops;Manufacturer_Intel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Intel_Core_i5_1240P -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Intel_Core_i5_1240P">
+        <rdf:type rdf:resource="&laptops;Процессор"/>
+        <Имеет_число_ядер rdf:datatype="&xsd;int">12</Имеет_число_ядер>
+        <Имеет_частоту rdf:datatype="&xsd;int">4400</Имеет_частоту>
+        <Произведен rdf:resource="&laptops;Manufacturer_Intel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Intel_Core_i5_12450H -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Intel_Core_i5_12450H">
+        <rdf:type rdf:resource="&laptops;Процессор"/>
+        <Имеет_частоту rdf:datatype="&xsd;int">4400</Имеет_частоту>
+        <Имеет_число_ядер rdf:datatype="&xsd;int">8</Имеет_число_ядер>
+        <Произведен rdf:resource="&laptops;Manufacturer_Intel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Intel_Core_i7_12650H -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Intel_Core_i7_12650H">
+        <rdf:type rdf:resource="&laptops;Процессор"/>
+        <Имеет_число_ядер rdf:datatype="&xsd;int">10</Имеет_число_ядер>
+        <Имеет_частоту rdf:datatype="&xsd;int">4700</Имеет_частоту>
+        <Произведен rdf:resource="&laptops;Manufacturer_Intel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Intel_Iris_Xe_Graphics_G7 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Intel_Iris_Xe_Graphics_G7">
+        <rdf:type rdf:resource="&laptops;Встроенная_видеокарта"/>
+        <Произведен rdf:resource="&laptops;Manufacturer_Intel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Intel_UHD_Graphics -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Intel_UHD_Graphics">
+        <rdf:type rdf:resource="&laptops;Встроенная_видеокарта"/>
+        <Произведен rdf:resource="&laptops;Manufacturer_Intel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#MSI -->
+
+    <owl:NamedIndividual rdf:about="&laptops;MSI">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#MSI_Sword_17_A12VF-810XRU -->
+
+    <owl:NamedIndividual rdf:about="&laptops;MSI_Sword_17_A12VF-810XRU">
+        <rdf:type rdf:resource="&laptops;Ноутбук"/>
+        <Гарантия_мес rdf:datatype="&xsd;int">12</Гарантия_мес>
+        <Имеет_цену rdf:datatype="&xsd;int">145990</Имеет_цену>
+        <Вес rdf:datatype="&xsd;float">2.6</Вес>
+        <Материал rdf:datatype="&xsd;string">Пластик</Материал>
+        <Имеет rdf:resource="&laptops;32ГБ_DDR5"/>
+        <Работает_на rdf:resource="&laptops;FREE_DOS"/>
+        <Имеет rdf:resource="&laptops;Intel_Core_i7_12650H"/>
+        <Произведен rdf:resource="&laptops;MSI"/>
+        <Имеет rdf:resource="&laptops;RTX_4060"/>
+        <Имеет rdf:resource="&laptops;SSD_1TB"/>
+        <Имеет rdf:resource="&laptops;Аккумулятор_460"/>
+        <Имеет rdf:resource="&laptops;Аккумулятор_560"/>
+        <Имеет rdf:resource="&laptops;МОДУЛЬ_WIFI_BLUETOoTH"/>
+        <Имеет rdf:resource="&laptops;Экран:_17.3_;_1920х1080;_IPS;"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_AMD -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_AMD">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>AMD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_Acer -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_Acer">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>Acer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_Asus -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_Asus">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>Asus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_HP -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_HP">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>HP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_Huawei -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_Huawei">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>Huawei</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_Intel -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_Intel">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>Intel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_Lenovo -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_Lenovo">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>Lenovo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Manufacturer_NVIDIA -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Manufacturer_NVIDIA">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+        <rdfs:label>NVIDIA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#OS_Chrome_OS -->
+
+    <owl:NamedIndividual rdf:about="&laptops;OS_Chrome_OS">
+        <rdf:type rdf:resource="&laptops;Операционная_система"/>
+        <rdfs:label>Chrome OS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#OS_Windows_10_Home -->
+
+    <owl:NamedIndividual rdf:about="&laptops;OS_Windows_10_Home">
+        <rdf:type rdf:resource="&laptops;Операционная_система"/>
+        <rdfs:label>Windows 10 Home</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#OS_Windows_10_Pro -->
+
+    <owl:NamedIndividual rdf:about="&laptops;OS_Windows_10_Pro">
+        <rdf:type rdf:resource="&laptops;Операционная_система"/>
+        <rdfs:label>Windows 10 Pro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#OS_Windows_11_Home -->
+
+    <owl:NamedIndividual rdf:about="&laptops;OS_Windows_11_Home">
+        <rdf:type rdf:resource="&laptops;Операционная_система"/>
+        <rdfs:label>Windows 11 Home</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#OS_Windows_11_Pro -->
+
+    <owl:NamedIndividual rdf:about="&laptops;OS_Windows_11_Pro">
+        <rdf:type rdf:resource="&laptops;Операционная_система"/>
+        <rdfs:label>Windows 11 Pro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#RTX_4060 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;RTX_4060">
+        <rdf:type rdf:resource="&laptops;Дискретная_видеокарта"/>
+        <Имеет_объем_VRAM rdf:datatype="&xsd;int">8</Имеет_объем_VRAM>
+        <Произведен rdf:resource="&laptops;Manufacturer_NVIDIA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#SSD_1TB -->
+
+    <owl:NamedIndividual rdf:about="&laptops;SSD_1TB">
+        <rdf:type rdf:resource="&laptops;SSD"/>
+        <Имеет_объем_диска rdf:datatype="&xsd;int">1024</Имеет_объем_диска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#SSD_256GB -->
+
+    <owl:NamedIndividual rdf:about="&laptops;SSD_256GB">
+        <rdf:type rdf:resource="&laptops;SSD"/>
+        <Имеет_объем_диска rdf:datatype="&xsd;int">256</Имеет_объем_диска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#SSD_512GB -->
+
+    <owl:NamedIndividual rdf:about="&laptops;SSD_512GB">
+        <rdf:type rdf:resource="&laptops;SSD"/>
+        <Имеет_объем_диска rdf:datatype="&xsd;int">512</Имеет_объем_диска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Xiaomi -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Xiaomi">
+        <rdf:type rdf:resource="&laptops;Производитель"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Xiaomi_RedmiBook_JYU4525RU -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Xiaomi_RedmiBook_JYU4525RU">
+        <rdf:type rdf:resource="&laptops;Ноутбук"/>
+        <Вес rdf:datatype="&xsd;float">1.8</Вес>
+        <Гарантия_мес rdf:datatype="&xsd;int">12</Гарантия_мес>
+        <Имеет_цену rdf:datatype="&xsd;int">29990</Имеет_цену>
+        <Материал rdf:datatype="&xsd;string">Пластик</Материал>
+        <Имеет rdf:resource="&laptops;8ГБ_DDR4"/>
+        <Имеет rdf:resource="&laptops;Intel_Core_i3_1115G4"/>
+        <Имеет rdf:resource="&laptops;Intel_UHD_Graphics"/>
+        <Работает_на rdf:resource="&laptops;OS_Windows_11_Home"/>
+        <Имеет rdf:resource="&laptops;SSD_256GB"/>
+        <Произведен rdf:resource="&laptops;Xiaomi"/>
+        <Имеет rdf:resource="&laptops;МОДУЛЬ_WIFI_BLUETOoTH"/>
+        <Имеет rdf:resource="&laptops;Экран:_15.6_;_1920х1080;_TN;"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Аккумулятор_420 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Аккумулятор_420">
+        <rdf:type rdf:resource="&laptops;Батарея"/>
+        <Имеет_емкость rdf:datatype="&xsd;float">42.0</Имеет_емкость>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Аккумулятор_460 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Аккумулятор_460">
+        <rdf:type rdf:resource="&laptops;Батарея"/>
+        <Имеет_емкость rdf:datatype="&xsd;float">46.0</Имеет_емкость>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Аккумулятор_500 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Аккумулятор_500">
+        <rdf:type rdf:resource="&laptops;Батарея"/>
+        <Имеет_емкость rdf:datatype="&xsd;float">50.0</Имеет_емкость>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Аккумулятор_535 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Аккумулятор_535">
+        <rdf:type rdf:resource="&laptops;Батарея"/>
+        <Имеет_емкость rdf:datatype="&xsd;float">53.5</Имеет_емкость>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Аккумулятор_560 -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Аккумулятор_560">
+        <rdf:type rdf:resource="&laptops;Батарея"/>
+        <Имеет_емкость rdf:datatype="&xsd;float">56.0</Имеет_емкость>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Клавиатура -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Клавиатура"/>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Клавиатура_РУ -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Клавиатура_РУ"/>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#МОДУЛЬ_WIFI_BLUETOoTH -->
+
+    <owl:NamedIndividual rdf:about="&laptops;МОДУЛЬ_WIFI_BLUETOoTH">
+        <rdf:type rdf:resource="&laptops;Модуль"/>
+        <Bluetooth rdf:datatype="&xsd;boolean">true</Bluetooth>
+        <WIFI rdf:datatype="&xsd;boolean">true</WIFI>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#ЭКРАН_14_;_2160х1440;_IPS; -->
+
+    <owl:NamedIndividual rdf:about="&laptops;ЭКРАН_14_;_2160х1440;_IPS;">
+        <rdf:type rdf:resource="&laptops;Дисплей"/>
+        <Имеет_диагональ rdf:datatype="&xsd;float">14.0</Имеет_диагональ>
+        <Имеет_разрешение_дисплея rdf:datatype="&xsd;int">1440</Имеет_разрешение_дисплея>
+        <Имеет_тип_дисплея rdf:datatype="&xsd;string">IPS</Имеет_тип_дисплея>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Экран:_15.6_;_1920х1080;_TN; -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Экран:_15.6_;_1920х1080;_TN;">
+        <rdf:type rdf:resource="&laptops;Дисплей"/>
+        <Имеет_разрешение_дисплея rdf:datatype="&xsd;int">1080</Имеет_разрешение_дисплея>
+        <Имеет_диагональ rdf:datatype="&xsd;float">15.6</Имеет_диагональ>
+        <Имеет_тип_дисплея rdf:datatype="&xsd;string">TN</Имеет_тип_дисплея>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Экран:_17.3_;_1920х1080;_IPS; -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Экран:_17.3_;_1920х1080;_IPS;">
+        <rdf:type rdf:resource="&laptops;Дисплей"/>
+        <Имеет_разрешение_дисплея rdf:datatype="&xsd;int">1080</Имеет_разрешение_дисплея>
+        <Имеет_диагональ rdf:datatype="&xsd;float">17.3</Имеет_диагональ>
+        <Имеет_тип_дисплея rdf:datatype="&xsd;string">IPS</Имеет_тип_дисплея>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#Экран_15.6_;_1920х1080;_IPS; -->
+
+    <owl:NamedIndividual rdf:about="&laptops;Экран_15.6_;_1920х1080;_IPS;">
+        <rdf:type rdf:resource="&laptops;Дисплей"/>
+        <Имеет_разрешение_дисплея rdf:datatype="&xsd;int">1080</Имеет_разрешение_дисплея>
+        <Имеет_диагональ rdf:datatype="&xsd;float">15.6</Имеет_диагональ>
+        <Имеет_тип_дисплея rdf:datatype="&xsd;string">IPS</Имеет_тип_дисплея>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RedMaG02/laptops#без_ОС -->
+
+    <owl:NamedIndividual rdf:about="&laptops;без_ОС">
+        <rdf:type rdf:resource="&laptops;Операционная_система"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigabyte"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;inch-International"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;gigahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;wattHour"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;megahertz"/>
+    </rdf:Description>
+    <rdf:Description>
+        <om:hasUnit rdf:resource="&om;pixel"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

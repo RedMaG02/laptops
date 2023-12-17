@@ -1,0 +1,73 @@
+PREFIX : <https://github.com/RedMaG02/laptops#>
+
+SELECT ?ноутбуки
+WHERE {
+  ?ноутбуки rdf:type :Ноутбук.
+}
+
+
+
+
+SELECT ?laptopWithBluetooth
+WHERE {
+  ?laptopWithBluetooth rdf:type :Ноутбук.
+  ?laptopWithBluetooth :Имеет ?bluetoothModule.
+  ?bluetoothModule rdf:type :Модуль.
+  ?bluetoothModule :Bluetooth ?hasBluetooth.
+  FILTER (?hasBluetooth =true)
+}
+
+
+
+SELECT ?manufacturer ?laptop
+WHERE {
+  ?laptop rdf:type :Ноутбук.
+  ?laptop :Произведен ?manufacturer.
+  ?manufacturer rdf:type :Производитель.
+}
+
+
+
+
+SELECT ?cheapIntelLaptop
+WHERE {
+  ?cheapIntelLaptop rdf:type :Ноутбук.
+  ?cheapIntelLaptop :Имеет_цену ?price.
+  FILTER (?price < 30000)
+  ?cheapIntelLaptop :Имеет ?processor.
+  ?processor rdf:type :Процессор.
+}
+
+
+
+SELECT ?laptopWithBattery
+WHERE {
+  ?laptopWithBattery rdf:type :Ноутбук.
+  ?laptopWithBattery :Имеет ?battery.
+  ?battery rdf:type :Батарея.
+  ?battery :Имеет_емкость ?capacity.
+  FILTER (?capacity > 50)
+}
+
+
+
+
+SELECT ?laptop
+WHERE {
+  {
+    ?laptop rdf:type :Ноутбук.
+    ?laptop :Имеет_цену ?price.
+    FILTER (?price < 30000)
+    ?laptop :Имеет ?processor.
+    ?processor rdf:type :Процессор.
+  }
+  UNION
+  {
+    ?laptop rdf:type :Ноутбук.
+    ?laptop :Имеет ?battery.
+    ?battery rdf:type :Батарея.
+    ?battery :Имеет_емкость ?capacity.
+    FILTER (?capacity > 50)
+  }
+}
+
